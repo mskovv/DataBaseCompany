@@ -12,6 +12,6 @@
 </head>
 <body>
     List of workers:
- <h2> <a href="editWorkers.jsp"> edit list </a></h2>
+ <h2> <a href="editworkers.jsp"> edit list </a></h2>
 </body>
 </html>
