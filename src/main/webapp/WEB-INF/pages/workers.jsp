@@ -12,6 +12,8 @@
 </head>
 <body>
     List of workers:
+${worker}
+
  <h2><a href="/editworkers"> edit list </a></h2>
 </body>
 </html>
