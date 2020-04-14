@@ -2,16 +2,18 @@
   Created by IntelliJ IDEA.
   User: masla
   Date: 14.04.2020
-  Time: 15:46
+  Time: 15:50
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Работники</title>
+    <title>Edit Workers</title>
 </head>
 <body>
-    List of workers:
- <h2> <a href="editworkers.jsp"> edit list </a></h2>
+New:
+Update:
+Delete:
+<h3><a href="/"> behind </a> </h3>
 </body>
 </html>

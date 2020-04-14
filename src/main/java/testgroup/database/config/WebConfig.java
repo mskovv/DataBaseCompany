@@ -18,6 +18,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
             InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
             viewResolver.setPrefix("/pages/");
             viewResolver.setSuffix(".jsp");
+            viewResolver.setPrefix("/WEB-INF/pages/");
             return viewResolver;
         }
 }
