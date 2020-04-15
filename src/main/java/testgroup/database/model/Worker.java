@@ -19,6 +19,9 @@ public class Worker {
         this.works = works;
     }
 //getters &setters
+    public String toString(){
+        return id + name + " " + surname + " " + dept;
+    }
     public Worker (){}
 
     public void setId(int id){

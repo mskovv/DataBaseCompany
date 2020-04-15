@@ -11,7 +11,7 @@ public class WorkersController {
 
 
     private static Worker worker ;
-    
+
 
     static {
         worker = new Worker();
@@ -22,8 +22,15 @@ public class WorkersController {
         worker.setDept("Backend");
         worker.setGender("Male");
         worker.setWorks(true);
-        worker.getAge();
-        worker.getName();
+        System.out.println(worker.toString());
+//        worker.getAge();
+//        worker.getName();
+//        worker.getSurname();
+//        worker.getDept();
+//        worker.getId();
+//        worker.getGender();
+//        worker.getWorks();
+
 
     }
 
@@ -39,6 +46,7 @@ public class WorkersController {
     public ModelAndView workers() {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("workers");
+        modelAndView.addObject("worker", worker);
         return modelAndView;
     }
 
