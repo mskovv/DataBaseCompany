@@ -22,25 +22,8 @@ public class WorkersController {
         worker.setDept("Backend");
         worker.setGender("Male");
         worker.setWorks(true);
-        System.out.println(worker.toString());
-//        worker.getAge();
-//        worker.getName();
-//        worker.getSurname();
-//        worker.getDept();
-//        worker.getId();
-//        worker.getGender();
-//        worker.getWorks();
-
-
     }
 
-    @RequestMapping(method = RequestMethod.GET)
-    public ModelAndView allFilms() {
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("worker");
-        modelAndView.addObject("worker", worker);
-        return modelAndView;
-    }
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public ModelAndView workers() {
