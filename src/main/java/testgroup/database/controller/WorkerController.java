@@ -5,33 +5,25 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import testgroup.database.model.Worker;
+import testgroup.database.service.WorkerService;
+import testgroup.database.service.WorkerServiceImpl;
+
+import java.util.List;
 
 @Controller
-public class WorkersController {
+public class WorkerController {
+    private WorkerService workerService = new WorkerServiceImpl();
 
 
-    private static Worker worker ;
-
-
-    static {
-        worker = new Worker();
-        worker.setId(1);
-        worker.setAge(20);
-        worker.setName("Dima");
-        worker.setSurname("Ivanov");
-        worker.setDept("Backend");
-        worker.setGender("Male");
-        worker.setWorks(true);
-    }
-
-
-    @RequestMapping(value = "/", method = RequestMethod.GET)
-    public ModelAndView workers() {
+    @RequestMapping(method = RequestMethod.GET)
+    public ModelAndView allworkers() {
+        List<Worker> workers = workerService.allworkers();
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("workers");
-        modelAndView.addObject("worker", worker);
+        modelAndView.addObject("workersList", workers);
         return modelAndView;
     }
+
 
     @RequestMapping(value = "/editworkers", method = RequestMethod.GET)
     public ModelAndView editworkers() {
