@@ -59,5 +59,13 @@ public class WorkerController {
         workerService.add(worker);
         return modelAndView;
     }
+
+    @RequestMapping(value = "/add", method = RequestMethod.POST)
+    public ModelAndView delete(@ModelAttribute("Worker") Worker worker) {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("redirect:/");
+        workerService.delete(worker);
+        return modelAndView;
+    }
 }
 
