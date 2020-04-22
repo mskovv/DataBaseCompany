@@ -24,6 +24,7 @@
         <th>Department</th>
         <th>Works or not</th>
     </tr>
+    <jsp:useBean id="workersList" scope="request" type="java.util.List"/>
     <c:forEach var="worker" items="${workersList}">
         <tr>
             <td>${worker.id}</td>
@@ -34,7 +35,7 @@
             <td>${worker.dept}</td>
             <td>${worker.works}</td>
             <td>
-                <a href="/edit/${worker.id}">edit</a>
+                <a href="/editPage/${worker.id}">edit</a>
                 <a href="/delete/${worker.id}">delete</a>
             </td>
         </tr>

@@ -19,9 +19,10 @@ public class Worker {
         this.works = works;
     }
 //getters &setters
-    public String toString(){
-        return id + name + " " + surname + " " + dept;
-    }
+//    public String toString(){
+//        return id + name + " " + surname + " " + dept;
+//    }
+
     public Worker (){}
 
     public void setId(int id){
@@ -59,7 +60,8 @@ public class Worker {
     public void setAge(int age){
         if(age > 18) {
             this.age = age;
-        }else {System.out.println("Возраст должен быть больше 18 лет");}
+        }else
+            {System.out.println("Возраст должен быть больше 18 лет");}
     }
 
     public int getAge(){
